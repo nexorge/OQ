@@ -7,7 +7,7 @@ tags:
 published: 2025-09-08
 ---
 
-> [!tip] Title
+> [!tip]- Title
 > Contents
 > ``` python
 >  print(hello world)
@@ -15,5 +15,3 @@ published: 2025-09-08
 
 > [!example] Title
 > Contents 
-
-
