@@ -223,6 +223,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       hoveredNeighbours = new Set()
       for (const n of nodeRenderData) {
         n.active = false
+        n.label.alpha = 0
       }
 
       for (const l of linkRenderData) {
@@ -242,6 +243,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
 
       for (const n of nodeRenderData) {
         n.active = hoveredNeighbours.has(n.simulationData.id)
+        if (n.active) {
+          n.label.alpha = 1
+        }
       }
     }
   }
@@ -284,7 +288,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     for (const n of nodeRenderData) {
       const nodeId = n.simulationData.id
 
-      if (hoveredNodeId === nodeId) {
+      if (hoveredNodeId === nodeId || hoveredNeighbours.has(nodeId)) {
         tweenGroup.add(
           new Tweened<Text>(n.label).to(
             {
