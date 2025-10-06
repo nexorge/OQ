@@ -6,5 +6,5 @@ date modified: Tuesday, October 7th 2025, 7:13:20 am
 このサイトでは、CG制作に関するレポートやノウハウを記録しています。
 
 [[Report/]]  
-[[Ae Tutrial/]]  
-[[UE Tutrial/]]
+[[Ae Tutorial/]]  
+[[UE Tutorial/]]
