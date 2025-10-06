@@ -15,3 +15,19 @@ pre > code {
   color: var(--dark) !important;
 
 }
+
+// .rightより詳細な.right-columnを指定し、!importantで強制的にスタイルを適用
+.right > .right-column > .toc {
+  height: calc(100vh - var(--header-height) - 2rem) !important;
+  overflow-y: auto !important;
+}
+
+/* 右カラム全体のコンテナのスクロールを有効にする */
+.desktop-only .right {
+  overflow-y: auto !important;
+}
+
+/* TOC自体の固定の高さを解除し、内容に合わせて可変にする */
+.desktop-only .right .toc {
+  height: initial !important;
+}
